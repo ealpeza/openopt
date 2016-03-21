@@ -21,7 +21,7 @@ class lcpsolve(baseSolver):
         p.xf = hstack((w, z))
         if retcode[0] == 1:
             p.istop = 1000
-            p.msg = 'success'
+            p.msg = str(retcode[1])
         elif retcode[0] == 2:
             p.istop = -1000
-            p.msg = 'ray termination'
+            p.msg = str(retcode[1])
